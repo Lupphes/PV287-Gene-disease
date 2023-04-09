@@ -1,0 +1,6 @@
+CREATE VIEW gene_disease_view AS
+SELECT gd.NID, da.diseaseId, da.diseaseName, da.type, ga.geneId, ga.geneName, gd.source, gd.association, gd.associationType, gd.sentence, gd.pmid, gd.score, gd.EL, gd.EI, gd.year
+FROM geneDiseaseNetwork gd
+JOIN diseaseAttributes da ON gd.diseaseNID = da.diseaseNID
+JOIN geneAttributes ga ON gd.geneNID = ga.geneNID;
+	

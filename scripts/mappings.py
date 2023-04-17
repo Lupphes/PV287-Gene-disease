@@ -25,7 +25,7 @@ mapping_go = parsed_go_data.merge(gaf_data, left_on="id", right_on="DB_Object_Sy
 
 # print(mapping_go[['id', 'DB_Object_Symbol']].head())
 
-mapping_full = mapping_go.merge(disgenet_data, left_on="id", right_on="geneName")
+mapping_full = mapping_go.merge(disgenet_data.head(), left_on="DB", right_on="geneName")
 
 # Print the first 5 rows of the combined data
 print(mapping_full.head())

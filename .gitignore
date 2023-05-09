@@ -131,4 +131,5 @@ dmypy.json
 
 # Custom
 data.zip
-data/
+/data/*
+!/data/mapping_gene_to_go.json
